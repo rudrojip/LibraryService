@@ -19,6 +19,7 @@ namespace LibraryService
                         builder.Configuration.GetSection("LibraryDatabase"));
             builder.Services.AddSingleton<NotifyUsers>();
             builder.Services.AddSingleton<BooksService>();
+            builder.Services.AddSingleton<NotificationService>();
 
             var app = builder.Build();
 
