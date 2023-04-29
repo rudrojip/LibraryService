@@ -17,6 +17,7 @@ namespace LibraryService
             builder.Services.AddSwaggerGen();
             builder.Services.Configure<LibraryDatabaseSettings>(
                         builder.Configuration.GetSection("LibraryDatabase"));
+            builder.Services.AddSingleton<NotifyUsers>();
             builder.Services.AddSingleton<BooksService>();
 
             var app = builder.Build();

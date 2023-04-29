@@ -65,7 +65,7 @@ namespace LibraryService.Controllers
                 return NotFound();
             }
 
-            await _booksService.RemoveAsync(id);
+            await _booksService.RemoveAsync(id, book);
 
             return NoContent();
         }

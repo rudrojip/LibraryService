@@ -5,24 +5,23 @@ namespace LibraryService.Models
 {
     public class BookDTO
     {
-        // Root myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(myJsonResponse);
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        public string? Id { get; set; } 
         [BsonElement("author")]
-        public string? Author { get; set; }
+        public string Author { get; set; } = null!;
         [BsonElement("country")]
-        public string? Country { get; set; }
+        public string Country { get; set; } = null!;
         [BsonElement("imageLink")]
-        public string? ImageLink { get; set; }
+        public string ImageLink { get; set; } = null!;
         [BsonElement("language")]
-        public string? Language { get; set; }
+        public string Language { get; set; } = null!;
         [BsonElement("link")]
-        public string? Link { get; set; }
+        public string Link { get; set; } = null!;
         [BsonElement("pages")]
         public int Pages { get; set; }
         [BsonElement("title")]
-        public string? Title { get; set; }
+        public string Title { get; set; } = null!;
         [BsonElement("year")]
         public int Year { get; set; }
         [BsonElement("stockLeft")]
